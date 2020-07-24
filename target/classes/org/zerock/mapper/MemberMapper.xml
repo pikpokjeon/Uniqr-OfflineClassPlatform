@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zerock.mapper.MemberMapper">
+
+<select id="getList" resultType="org.zerock.domain.MemberVO">
+<![CDATA[
+select * from member where mno > 0
+]]>
+</select>
+
+<insert id="insert">
+	
+	insert into member (mno,mid,mpassword,mname,maddress,mphone,mphone1,mphone2,mage,memail,mpost,mdetailaddress)
+	values (mno_sequence.nextval ,#{mid}, #{mpassword}, #{mname} ,#{maddress},#{mphone},#{mphone1},#{mphone2},#{mage},#{memail},#{mpost},#{mdetailaddress})
+	
+</insert>
+
+<select id="result" resultType="org.zerock.domain.MemberVO">
+
+	select mid from member where mid=#{mid}
+
+</select>
+
+<select id="emailcheck" resultType="org.zerock.domain.MemberVO">
+
+	select memail from member where memail=#{memail}
+	
+</select>
+
+
+<update id="agree">
+	update member set magree='Y' where mid=#{mid}
+</update>
+
+
+<select id="login" resultType="org.zerock.domain.MemberVO">
+	select * from member where mid=#{mid} and mpassword=#{mpassword}
+</select>
+
+<delete id="delete">
+	delete from member where mno=#{mno}
+</delete>
+
+<update id="update">
+<![CDATA[
+update member set mpassword=#{mpassword}, memail=#{memail},mpost=#{mpost},maddress=#{maddress},mdetailaddress=#{mdetailaddress} where mid=#{mid}
+]]>
+</update>
+
+
+<select id="select" resultType="org.zerock.domain.MemberVO">
+	select * from member where mno=#{mno}
+</select>
+
+
+</mapper>

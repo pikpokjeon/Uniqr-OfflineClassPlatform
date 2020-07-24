@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zerock.mapper.AdminBoardMapper">
+
+<select id="getList" resultType="org.zerock.domain.AdminBoardVO">
+<![CDATA[
+select * from adminboard where adno > 0 order by adno asc
+]]>
+</select>
+
+<insert id="insert">
+	insert into adminboard (adno,atitle,acontent,aregdate,mid,acategory,apicture)
+	values (adno_sequence.nextval, #{atitle}, #{acontent}, sysdate,#{mid},#{acategory},#{apicture})
+</insert>
+
+
+
+<select id="read" resultType="org.zerock.domain.AdminBoardVO">
+	select * from adminboard where adno=#{adno}
+</select>
+
+<delete id="delete">
+	delete from adminboard where adno=#{adno}
+</delete>
+
+<update id="update">
+	update adminboard
+	set atitle=#{atitle},
+	acontent=#{acontent},
+	mid=#{mid},
+	apicture=#{apicture},
+	acategory=#{acategory}
+	where adno=#{adno}
+</update>
+
+<insert id="insertcomment">
+	insert into adcomment (adno,mid,adcomment,acregdate,adpicture)
+	values (#{adno}, #{mid}, #{adcomment},sysdate,#{adpicture, jdbcType=VARCHAR})
+</insert>
+
+<select id="getcomment" resultType="org.zerock.domain.AdminCommentVO">
+	select * from adcomment where adno=#{adno}
+</select>
+
+
+</mapper>

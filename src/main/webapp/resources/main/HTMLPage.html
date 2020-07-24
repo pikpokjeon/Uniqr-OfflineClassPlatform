@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Chat</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="socket.io.js"></script>
+   
+</head>
+  <body>
+    <div data-role="page" id="chatpage">
+      <div data-role="content" id="chatarea">
+        <ul id="content" data-role="listview" data-inset="true"></ul>
+        <input id="message" />
+        <button>Button</button>
+      </div>
+    </div>
+  </body>
+  <style>
+    #chatpage {
+      width: 100%;
+    }
+
+    #chatarea {
+      width: 100%;
+      border: 1px solid #e6e6e6;
+      border-radius: 5px;
+      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.14);
+    }
+
+    #content {
+      list-style: none;
+    }
+
+    #content li {height: 35px;
+    font-size: 15px;
+    }
+
+    #content li p {
+        display: inline-block;
+    min-width: 60px;
+    }
+
+    #name {
+      font-weight: 600;
+    }
+
+    #message {
+        width: 76%;
+    padding: 10px;
+    background: #efefef;
+    border: 0;
+    font-size: 16px;
+    padding-left: 50px;
+    }
+
+    button {
+        width: 16%;
+    padding: 10px;
+    border: 1px solid #c3c3c3;
+    border-radius: 3px;
+    }
+  </style>
+
+   <script>
+     
+        $(document).ready(function () {
+            // 변수를 선언합니다.
+            var socket = io.connect("http://127.0.0.1:52273/");
+			  const url = window.location.search;
+ 
+			const urlA = url.substr(1);
+  
+			const array = urlA.split('=');
+  
+			const array2 = array[1].split('&');  
+		
+			
+
+			const mid=array[2];
+	
+			const room = array2[0];
+			
+
+			socket.emit('join',room); 
+			// 이벤트를 연결합니다.
+            socket.on('message', function (data) {
+                // 추가할 문자열을 만듭니다.
+                var output = '';
+                output += '<li>';
+                output += '    <p id="name">' + data.name + '</p>'+"<p>"+ data.message + '</p>';
+                output += '</li>';
+
+                // 문서 객체를 추가합니다.
+                $(output).prependTo('#content');
+                $('#content').listview('refresh');
+            });
+            
+			
+            // 버튼을 클릭할 때
+            $('button').click(function () {
+                socket.emit('message', {
+                    name: mid,
+                    message: $('#message').val(),
+                    room:room
+                });
+            });
+          
+            
+            window.onbeforeunload = function() {
+            	alert("안녕하세요");
+        	   socket.emit('disconnection',socket);
+            	return;
+           }
+            
+       
+    });
+    
+
+    </script>
+</body>
+</html>

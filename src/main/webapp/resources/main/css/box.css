@@ -1,0 +1,67 @@
+	html{
+	min-height:100%;
+	
+	}
+  body {
+    background-color: #f8f9fa;
+  }
+
+  h3 {
+    display: block;
+    margin-bottom: 40px;
+    margin-left: 1em;
+  }
+
+  #regWrapper {
+margin: auto;
+    width: 51%;
+    top: 4%;
+    position: relative;
+    display: block;
+    box-shadow: 0px 3px 18px -8px rgba(0, 0, 0, 0.48);
+    background-color: white;
+    padding: 5% 5% 10% 5%;
+    border: #e2e2e2 1px solid;
+    border-radius: 5px;
+    margin-bottom: 6%;
+  }
+  #inputId{
+  width:80%;
+  }
+
+  table {
+      width: 90%;
+    margin: auto;
+  }
+
+  .formBox {
+    width: 700px;
+    margin: auto;
+  }
+
+  form {}
+
+  .formBox p {
+    display: inline-block;
+    float: left;
+  }
+
+  .form-control {
+    width: 400px;
+  }
+
+  form input {}
+
+  #inputPhone1,#inputPhone2,#inputPhone3 {
+    width: 100px;
+    display: inline-block;
+  }
+
+  #loginButton {
+    float: right;
+  }
+
+  label {
+
+    width: 100%;
+  }

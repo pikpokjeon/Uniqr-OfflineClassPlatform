@@ -1,0 +1,300 @@
+html {
+  height: 100%;
+
+
+}
+
+body {
+  background-color: #f3f3f3 !important;
+  z-index: -200;
+  overflow-x: hidden;
+  height: 100%;
+    font-family: Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+    font-size: 15px;
+    line-height: 1.43;
+    color: #29303b;
+    margin: 0;
+}
+.bg{
+	  width: 100%;
+  background: no-repeat url(/resources/img/bg5.png);
+  height: 100%;
+  z-index: -10;
+  position: absolute;
+}
+.detailBg {
+    width: 100%;
+    height: 36%;
+    z-index: -10;
+    position: absolute;
+    /* background: linear-gradient(227deg, #f65e76, #5118ba); */
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+    /* transform: rotate(6deg); */
+    top: 0;
+    /* background: #3c3c3c;*/
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 97%
+  }
+
+  50% {
+    background-position: 100% 4%
+  }
+
+  100% {
+    background-position: 0% 97%
+  }
+}
+
+.subTitle {
+    letter-spacing: 1px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #29303b;
+}
+
+svg {}
+.videoWrapper {
+    width: 100%;
+    height: 538px;
+    margin-bottom: 10px;
+}
+
+/* <!-- 우측메뉴 --> */
+#thumbImg {
+    background-color: #797979;
+}
+
+
+
+/* 옵션 */
+.detailRight {
+display: block;
+    position: fixed;
+    padding: 12px;
+    right: 15%;
+    width: 18%;
+    z-index: 100;
+    background: white;
+    box-shadow: 0px 3px 18px -8px rgba(0, 0, 0, 0.48);
+    border-top: 10px solid #797979;
+}
+
+.optionBox {
+  margin-top: 13px;
+    padding: 15px;
+}
+
+.optionBox p {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.option {}
+
+.option label {
+  display: block;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.option select {
+  width: 100%;
+  height: 50px;
+}
+
+.priceBox {
+    display: inline-block;
+    width: 300px;
+    padding: 8px 8px 8px 0;
+    font-size: 1.8em;
+    text-align: right;
+    font-weight: 700;
+}
+
+#price {
+  display: inline-block;
+}
+
+.priceBox button {}
+
+#purchase {
+width: 100%;
+    margin-bottom: 13px;
+ background-color: #f55f77;
+    border: 0;
+    padding: 13px 0;
+}
+
+#buyNow {
+    width: 70%;
+    margin-bottom: 35px;
+    padding: 13px 0;
+}
+
+.detailRight svg {
+font-size: 2.1em;
+    margin-left: 8%;
+    top: 0;
+    display: inline-block;
+    margin-top: -13%;
+    color: #f55f77;
+    text-shadow: 4px 3px 0px #7A7A7A;
+}
+
+/* 왼쪽부분시작 */
+.detailLeft {
+
+margin-left: 15%;
+    width: 52%;
+    height: 180px;
+}
+
+.productHead ul {
+    list-style: none;
+    padding-inline-start: 0;
+    color: white;
+    margin-left: 31px;
+    margin-top: 20px;
+}
+
+.productHead li {
+  
+}
+
+#category {
+
+  display: inline-block;
+  padding: 6px 20px;
+  font-size: 16px;
+}
+
+#productTitle {
+
+  display: block;
+  font-size: 2em;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 1.2rem 8rem 1.2rem 1.2rem;
+}
+
+.info {
+  
+display: inline-block;
+    float: right;
+    font-size: 1.1em;
+    position: relative;
+    padding: 0.7rem 3rem;
+    height: 48px;
+}
+
+#rateStar {
+  display: inline-block;
+}
+
+.rateinfo {
+  display: inline-block;
+}
+
+#reviewCount {
+  display: inline-block;
+}
+
+#totalBuy {
+  display: inline-block;
+}
+
+
+/* <!-- 제목 별점등 상품 정보 --> */
+.productInfoSection {
+  width: 52%;
+
+  margin-left: 15%;
+  background: white;
+  margin-top: 0;
+}
+
+.whatLearn {
+      padding: 30px 54px;
+}
+
+.whatLearn p {}
+
+#learnList,
+#whoLearn,
+#learnReq {
+  list-style: none;
+  width: 910px;
+  margin: 0 auto;
+  padding-inline-start: 0;
+  padding: 1.5rem 0 1rem 1.5rem;
+}
+
+#learnList li,
+#whoLearn li,
+#learnReq li {
+  width: 32%;
+  display: inline-flex;
+}
+
+#learnList p {}
+
+/* 강의설명등등 */
+#lecInfos {}
+
+
+/* 프로필 */
+#profileImg {
+      width: 180px;
+    margin-bottom: 10px;
+}
+
+.profileInfo {
+  padding: 33px;
+}
+.profileInfo li {
+	height: 34px;
+}
+.mb-3{
+	    padding: 0 35px;
+}
+.col-md-4 {
+ padding: 1rem 0 0 2rem;
+}
+
+.col-md-4 ul {
+  list-style-type: none;
+  font-size: 1.1em;
+}
+
+
+.col-md-4 ul li p {
+  display: inline-block;
+  font-weight: 600;
+}
+
+#profileCard {
+  padding: 4rem 1.25rem;
+}
+
+.col-md-8 {}
+
+.col-md-8 h5 p {
+  display: inline-block;
+}
+
+#name {font-weight: 600;}
+
+#job {
+  font-size: 0.9em;
+}
+
+/* 강의콘텐츠목차111 */
+.lecInfo {
+  padding: 33px;
+}

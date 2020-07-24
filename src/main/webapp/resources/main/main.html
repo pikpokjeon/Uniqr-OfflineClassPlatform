@@ -1,0 +1,46 @@
+<head>
+  <meta charset="ko">
+  <meta name="viewpo//code.jquery.com/jquery-1.10.2.jsrt" content="width=device-width, initial-scale=1.0">
+  <title>메인페이지</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- 메인 내용css -->
+  <link rel="stylesheet" type="text/css" href="/main/css/mainContent.css">
+
+</head>
+<script>
+  $(function () {
+
+    $("#MainBanner").load("/resources/main/MainBanner.html");
+    $("#mlive").load("/resources/main/mlive.html");
+    $("#MItemList").load("/resources/main/MItemList.html");
+    $("#MItemList2").load("/resources/main/MItemList2.html");
+
+  });
+</script>
+<style>
+
+</style>
+
+<body>
+
+
+  <!-- 메인배너 -->
+  <div id="MainBanner"></div>
+
+  <!-- 라이브목록 -->
+  <div id="mlive"></div>
+
+  <!-- 상품목록메인리스트 -->
+  <div id="MItemList"></div>
+  <!-- 인기상품외 하단배너 -->
+  <div id="MItemList2"></div>
+
+
+
+
+
+
+</body>
+
+
+</html>

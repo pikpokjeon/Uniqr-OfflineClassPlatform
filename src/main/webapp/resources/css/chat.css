@@ -1,0 +1,47 @@
+#chatpage {
+  width: 100%;
+}
+
+#chatarea {
+width: 100%;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.14);
+    min-height: 250px;
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#content {
+  list-style: none;
+}
+
+#content li {
+  padding-left: 2%;
+  height: 35px;
+  font-size: 15px;
+}
+
+#content li p {
+  display: inline-block;
+}
+#name {
+  font-weight: 600;
+  min-width: 80px;
+}
+
+#message {
+  width: 89%;
+  padding: 10px;
+  background: #efefef;
+  border: 0;
+  font-size: 16px;
+  padding-left: 50px;
+}
+
+button {
+  width: 10%;
+  padding: 7px;
+  border: 1px solid #c3c3c3;
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+</head>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<script>
+  $(function () {
+    // 헤더넣기
+    $("#header1").load("resources/main/header1.html");
+    // 검색부분
+    $("#header2").load("resources/main/header2.html");
+    // 카테고리
+    $("#header3").load("resources/main/header3.html");
+
+
+    $("#footer").load("/main/footer.html");
+  });
+</script>
+<script>
+  $(function () {
+    $("#datepicker").datepicker();
+  });
+</script>
+<style>
+  body {
+    background-color: #f8f9fa;
+  }
+
+  h3 {
+    display: block;
+    margin-bottom: 40px;
+    margin-left: 2em;
+  }
+
+  #regWrapper {
+    margin: auto;
+    width: 1000px;
+    top: 230px;
+    position: relative;
+    display: block;
+    box-shadow: 0px 3px 18px -8px rgba(0, 0, 0, 0.48);
+    background-color: white;
+    padding: 80px 50px 120px 80px;
+    border: #e2e2e2 1px solid;
+    border-radius: 5px;
+    margin-bottom: 300px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .formBox {
+    width: 700px;
+    margin: auto;
+  }
+
+  form {}
+
+  .formBox p {
+    display: inline-block;
+    float: left;
+  }
+
+  .form-control {
+    width: 400px;
+  }
+
+  form input {}
+
+  #inputPhone {
+    width: 100px;
+    display: inline-block;
+  }
+
+  #loginButton {
+    float: right;
+  }
+
+  label {
+
+    width: 100%;
+  }
+</style>
+
+<body>
+  <!-- 필수헤더 -->
+  <div id="header1"></div>
+  <!-- 검색헤더 -->
+  <div id="header2"></div>
+  <!-- 카테고리헤더 -->
+  <div id="header3"></div>
+
+  <!-- 회원가입 -->
+
+  <div id="regWrapper">
+    <h3>회원가입</h3>
+    <form>
+
+      <div class="formBox">
+        <div>test2</div>
+
+        <table>
+          <tbody>
+            <tr>
+              <td> <label for="inputEmail">아이디</label></td>
+              <td>
+                <input type="id" class="form-control" id="inputId"><button type="button"
+                  class="btn btn-primary">중복확인</button><br></td>
+            </tr>
+            <tr>
+              <td> <label for="inputPassword">비밀번호</label></td>
+              <td>
+                <input type="password" class="form-control" id="inputPassword"></td>
+            </tr>
+            <tr>
+              <td> <label for="inputPassword">비밀번호획인</label></td>
+              <td> <input type="password" class="form-control" id="inputPassword"></td>
+            </tr>
+            <tr>
+              <td> <label for="inputName">이름</label></td>
+              <td> <input class="form-control" id="inputName">
+              </td>
+            </tr>
+            <tr>
+              <td> <label for="inputPhone">전화번호</label></td>
+              <td> <input class="form-control" id="inputPhone" maxlength="3" placeholder="010">
+
+                <input class="form-control" id="inputPhone" maxlength="4" placeholder="0000">
+
+                <input class="form-control" id="inputPhone" maxlength="4" placeholder="0000"></td>
+            </tr>
+            <tr>
+              <td> <label for="inputAddress">주소</label> </td>
+              <td> <input class="form-control  col-md-3" type="text" id="postcode" placeholder="우편번호">
+                <button type="button" onclick="sample6_execDaumPostcode()" value="" class="btn btn-primary">우편번호
+                  찾기</button><br>
+                <input class="form-control" type="text" id="address" placeholder="주소"><br>
+                <input class="form-control" type="text" id="detailAddress" placeholder="상세주소"></td>
+            </tr>
+            <tr>
+              <td> <label for="inputEmail">이메일</label></td>
+              <td>
+                <input type="email" class="form-control" id="inputEmail" placeholder="@example.com"></td>
+            </tr>
+            <tr>
+              <td> <label for="inputEmail">생년월일</label></td>
+              <td> <input type="text" class="form-control" placeholder="MM-DD-YYYY" id="datepicker">
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+
+        <button type="submit" class="btn btn-primary" id="loginButton">가입하기</button>
+
+      </div>
+
+    </form>
+  </div>
+  </div>
+
+
+  <!-- 우편번호API -->
+
+  <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <script>
+    function sample6_execDaumPostcode() {
+      new daum.Postcode({
+        oncomplete: function (data) {
+          // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+          // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+          // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+          var addr = ''; // 주소 변수
+          var extraAddr = ''; // 참고항목 변수
+
+          //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+          if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+            addr = data.roadAddress;
+          } else { // 사용자가 지번 주소를 선택했을 경우(J)
+            addr = data.jibunAddress;
+          }
+
+          // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+          if (data.userSelectedType === 'R') {
+            // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+            // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+            if (data.bname !== '' && /[동|로|가]$/g.test(data.bname)) {
+              extraAddr += data.bname;
+            }
+            // 건물명이 있고, 공동주택일 경우 추가한다.
+            if (data.buildingName !== '' && data.apartment === 'Y') {
+              extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+            }
+            // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+            if (extraAddr !== '') {
+              extraAddr = ' (' + extraAddr + ')';
+            }
+            // 조합된 참고항목을 해당 필드에 넣는다.
+            document.getElementById("sample6_extraAddress").value = extraAddr;
+
+          } else {
+            document.getElementById("sample6_extraAddress").value = '';
+          }
+
+          // 우편번호와 주소 정보를 해당 필드에 넣는다.
+          document.getElementById('sample6_postcode').value = data.zonecode;
+          document.getElementById("sample6_address").value = addr;
+          // 커서를 상세주소 필드로 이동한다.
+          document.getElementById("sample6_detailAddress").focus();
+        }
+      }).open();
+    }
+  </script>
+  <!-- 달력 -->
+
+
+  <!-- 글로벌푸터 -->
+  <div id="footer"></div>
+</body>
+
+</html>

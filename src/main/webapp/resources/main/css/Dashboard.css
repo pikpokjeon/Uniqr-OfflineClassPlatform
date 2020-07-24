@@ -1,0 +1,468 @@
+html {
+  height: 100%;
+  font-family: Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+  font-size: 15px;
+  line-height: 1.43;
+  color: #29303b;
+  margin: 0;
+
+}
+.container {
+	width:92 !important;
+}
+.col-8{
+	padding:0 !important;
+}
+
+.redBttn {
+  background: #f55f77;
+  padding: 1.2% 2%;
+  font-size: 1.1em;
+}
+
+.btn-primary {
+  background-color: #f55f77 !important;
+  border: 0 !important;
+}
+
+h4 {
+  font-size: 1.4rem !important;
+  font-weight: 600 !important;
+  color: #5e636d;
+  display: block;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+#subtitle h3 {
+  display: inline-block;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 41px;
+  padding: 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+label {
+  font-size: 1.1em;
+  padding: 10px;
+  width: 184px;
+}
+
+.form-control {
+  display: inline-block !important;
+}
+
+.box {
+  width: 83%;
+  display: block;
+  box-shadow: 0px 3px 18px -8px rgba(0, 0, 0, 0.18);
+  background-color: white;
+  padding: 2% 3% 10% 3%;
+  border-radius: 5px;
+  border: #d2d2d2 1px solid;
+
+}
+
+#category,
+#inputJob {
+  width: 54%;
+}
+
+#inputName,
+#inputID {
+  width: 300px;
+}
+
+#inputEmail,
+#inputPhone,
+#inputPW,#inputPW1, #inputPW2 {
+  width: 360px;
+}
+
+#minfoWrapper button {
+  float: right;
+}
+
+#loadpage {
+    padding: 0 0 10% 3%;
+  margin: 0;
+}
+
+#inputPhone1,#inputPhone2,#inputPhone3{
+   width:15%
+}
+
+.dashWrapper {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.menu:hover,
+.menu:focus {
+  box-shadow: inset 1.5em 0 0 0 #d3d3d3;
+}
+
+button:hover,
+button:focus {
+  border-color: #d3d3d3;
+  color: rgb(93, 67, 67);
+}
+
+.dash {}
+
+#DashWrap {
+  width: 100%;
+  height: auto;
+}
+
+#title {
+  width: 100%;
+  height: 122px;
+  /* background-color: #17a2b8; */
+  padding: 3px;
+
+
+  animation: AnimationName 23s ease infinite;
+
+  background: linear-gradient(227deg, #f65e76, #5118ba);
+  background-size: 400% 400%;
+  animation: AnimationName 30s ease infinite;
+  top: 0;
+
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 74% 0%;
+  }
+
+  50% {
+    background-position: 27% 100%;
+  }
+
+  100% {
+    background-position: 74% 0%;
+  }
+}
+
+#title h3 {
+  color: white;
+  font-weight: 700;
+  display: block;
+  float: right;
+  margin-right: 15%;
+  margin-top: 2.5%;
+  font-size: 2em;
+}
+
+#dleft {
+  /* list-style: none; */
+  /* text-align: right; */
+  background-color: #f5f5f5;
+  /* height: 1200px; */
+  /* flex: 19.333333%; */
+  /* padding: 0;*/
+}
+
+.list {
+  margin-left: 250px;
+  margin-bottom: 15px;
+}
+
+#menuList {
+  width: 60%;
+}
+
+#welcome {
+  text-align: center;
+  padding: 24px;
+  background: white;
+  height: 74px;
+  border-left: 14px solid #ec5252;
+  font-size: 1.1em;
+  box-shadow: 0px 21px 28px 2px rgba(219, 219, 219, 1);
+}
+
+#userName {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+#welcome p {
+  display: inline-block;
+  font-weight: 600;
+  color: #5e636d;
+}
+
+#uniList {
+  width: 60%;
+  background: #efefef;
+  padding: 34px 0;
+}
+
+#uniList h2 {
+  text-align: left;
+}
+
+#uni {
+  /* font-size: 15px; */
+}
+
+.menu {
+  border: 1px solid #eaeaea;
+  display: block;
+  width: 74%;
+  height: 46px;
+  background: white;
+  margin: 6px auto;
+  letter-spacing: 1px;
+  box-shadow: 0px 3px 18px -8px rgba(0, 0, 0, 0.19);
+  border-radius: 3px;
+  font-size: 16px;
+  color: #424242;
+}
+
+.uniqr {
+  font-size: 1.2em;
+  font-weight: 700;
+  display: inherit;
+  width: 83%;
+  background: #ececec;
+  padding: 10px 20px;
+  text-align: center;
+  margin: auto;
+  color: #484848;
+  margin-top: 10%;
+}
+
+/* 회원대시보드 */
+.rounded-circle {
+  width: 190px;
+  margin-left: 50%;
+}
+
+#profileImg {}
+
+.container {
+  margin-left: 2% !important;
+  padding: 0 !important;
+}
+
+/* 테이블 */
+p {
+  display: inline-block;
+}
+
+table {
+  width: 100%;
+}
+
+.basket,
+th {
+  width: 600px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #e6e6e6;
+}
+
+th {
+  padding: 15px;
+}
+
+tr>td {
+  padding-top: 12px;
+}
+
+​ .basketbtn {
+  text-align: right;
+}
+
+#sStat {}
+
+#center {
+  text-align: center;
+}
+
+#tableHead {
+  /* width: 1000px; */
+  text-align: center;
+}
+
+#orderBuyDate {}
+
+#pNum,
+#pThumb,
+#pName,
+#pPrice,
+#pStat,
+#pOrderNum,
+#pDate {
+  padding: 20px;
+  background: #f7f7f7;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #5a5a5a;
+}
+
+#pNum {
+  width: 11%;
+  text-align: center;
+}
+
+#pThumb {
+  width: 25%;
+}
+
+#pName {}
+
+#pPrice,
+#pDate {
+  width: 17%;
+}
+
+#pStat {
+  width: 17%;
+}
+
+#checkbox {
+  text-align: center;
+  display: inline-block;
+}
+
+#pCount {
+  text-align: center;
+  display: inline-block;
+}
+
+#pStat {}
+
+#selthum {
+  width: 100%;
+}
+
+#selname {}
+
+#selprice {}
+
+#buyBttn {
+  background: #f55f77;
+  border: 0;
+}
+
+/* 회원 자세한 정보페이지 */
+#address1,
+#address2 {
+  width: 73%;
+}
+
+#memberinfo {
+  width: 83%;
+  height: 100px;
+}
+
+#member {}
+
+#mimage {
+  top: 60%;
+  position: relative;
+  left: 30%;
+}
+
+#imgupload {
+  background-color: #17a2b8;
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  top: 150px;
+  left: 140px;
+}
+
+#imgupload svg {
+color: white;
+    font-size: 1.6em;
+    margin: 0 0% 0% 1%;
+}
+#ex_file{
+	display: none;
+}
+
+#minfoWrapper {}
+
+#minfoWrapper ul {
+  width: 87%;
+  list-style: none;
+}
+
+#minfoWrapper li {
+  padding: 3px 0;
+
+}
+
+#regdate {
+  display: block;
+  margin-top: 39px;
+}
+
+#submit {
+ width: 25%;
+   padding: 10px;
+   float: right;
+   background-color: #f55f77;
+   border: 0;
+   color:white;
+}
+
+/* 회원탈퇴 */
+#xinputID,#xinputPW {
+      width: 58%;
+}
+
+
+
+#exitbttn {
+    width: 16%;
+    padding: 3%;
+    display: inline-block;
+    margin-top: -7%;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+#mexit {
+  display: inline-block;
+  margin-top: 17%;
+  width: 58%;
+}
+
+/* 강의현황 */
+
+/* common테이블 */
+#commonTable {
+  margin-top: 15%;
+  display: inline-table;
+  width: 100%;
+}
+
+
+
+#commonTable button {
+  width: 100%;
+}
+
+#commonTable thead {}
+
+#commonTable tr {
+  font-size: 1.1em;
+}
+
+#commonTable td {}

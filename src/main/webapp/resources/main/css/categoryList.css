@@ -1,0 +1,415 @@
+html {
+  min-height: 100%;
+  height: 100%;
+
+}
+
+body {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(42deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(223, 246, 250, 1) 100%);
+  font-family: Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+  font-size: 15px;
+  line-height: 1.43;
+  color: #29303b;
+  margin: 0;
+
+}
+
+#midBg {
+  width: 100%;
+  height: 27%;
+  z-index: -10;
+  position: absolute;
+  background: linear-gradient(227deg, #f65e76, #5118ba);
+  background-size: 400% 400%;
+  animation: category 30s ease infinite;
+  top: 0;
+}
+
+@keyframes category {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+#mainTopList {
+  margin-top: 1%;
+}
+
+.bannerImg img {
+  width: 43%;
+  right: 99px;
+  position: absolute;
+  top: 43px;
+}
+
+#MItemList {
+  margin-top: 150px;
+}
+
+/* 메인베너 */
+#MainBanner {
+  width: 100%;
+  margin: auto;
+  top: 0;
+  position: relative;
+  height: 680px;
+}
+
+#descSection {
+  position: absolute;
+  top: 180px;
+  left: 504px;
+  color: white;
+}
+
+.desc {
+  letter-spacing: 1px;
+  font-size: 1.2em;
+  margin: 3px;
+}
+
+#carouselExampleCaptions {
+  height: 500px;
+}
+
+.carousel-inner {
+  width: 80%;
+}
+
+.carousel-caption {
+  left: 0;
+}
+
+.bannerTitle {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: white;
+  top: 142px;
+  position: absolute;
+  letter-spacing: 2px;
+  left: 50px;
+}
+
+.bannerBttn {
+  width: 200px;
+  border: 2px solid white;
+  padding: 13px 4px;
+  color: white;
+  display: block;
+  position: absolute;
+  font-size: 1.3em;
+  top: 170px;
+  left: 20px;
+  text-align: center;
+}
+
+/* 라이브목록 */
+
+#liveTitleSection {
+  position: absolute;
+  width: 500px;
+  text-align: center;
+  height: 60px;
+  font-size: 1.3em;
+  font-weight: 600;
+  top: -16px;
+}
+
+#mliveList {
+  width: 100%;
+}
+
+#liveListTitle {
+  display: inline-block;
+  background: white;
+  width: 200px;
+  padding: 5px;
+}
+
+#mlive {
+  width: 100%;
+  animation: A1 21s ease infinite;
+  display: block;
+  position: absolute;
+  height: 300px;
+  top: 700px;
+}
+
+#onAir {
+  background: #ff5671;
+  color: white;
+  display: inline-block;
+  width: 200px;
+  padding: 5px;
+}
+
+@keyframes A1 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#livecard {
+  float: left;
+  margin: 30px 10px;
+  max-width: 540px;
+  height: 164px;
+  padding: 10px;
+  box-shadow: 16px 17px 13px -6px rgba(117, 117, 117, 0.58);
+}
+
+.liveName {
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+
+.liveListTitle {
+  background: wheat;
+  text-align: center;
+  padding: 15px 30px;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.body {
+  padding: 20px;
+}
+
+.body {}
+
+.lecThumbImg {
+  background-color: grey;
+  width: 220px;
+  height: 140px;
+}
+
+/* m리스트 */
+.MitemLists {
+    width: 1300px;
+    margin: auto;
+    margin-top: 2%;
+    position: initial;
+}
+
+.listTitle {
+  display: block;
+  padding: 8px 0 8px 68px;
+  margin: 9px;
+  width: 100%;
+  font-size: 1.7em;
+  background-color: white;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #5e636d;
+}
+
+#mlistLecTitle {
+  font-size: 1.1em;
+}
+
+#won {
+  display: inline-block;
+}
+
+#mlistLecPrice {
+
+  display: inline-block;
+
+}
+
+#mlistLecStartDate {
+  /* display: inline-block; */
+}
+
+#lecStartDate {
+  display: inline-block;
+}
+
+#lecEndDate {
+  display: inline-block;
+}
+
+#listNameBox {
+/*   background: linear-gradient(270deg, #9951ff, #f65d76, #c3f65d); */
+  background-size: 400% 400%;
+  border-radius: 7px;
+  animation: mListName 24s ease infinite;
+  width: 29%;
+}
+
+@keyframes mListName {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.rounded-circle {
+  width: 290px;
+  vertical-align: middle;
+  border-style: none;
+}
+
+#card-point {
+  min-width: 500px;
+}
+
+.card-img-top {
+  background: rgb(79, 77, 88);
+  width: 100%;
+  height: 173px;
+}
+
+.card-img-top1 {
+  width: 100%;
+  background: rgb(79, 77, 88);
+  height: 300px;
+}
+
+.card-deck {
+  width: 1300px;
+}
+
+.card-deck .card {
+    margin: 2% 1% !important;
+    border: 0;
+    min-width: 295px;
+    max-width: 295px;
+}
+
+.Mnew {
+  margin-top: 30px;
+}
+
+.card {
+  height: 50%;
+  margin-top: 10%;
+}
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* m리스트2 */
+/* 분야별 베스트 유니커 */
+.bg {
+  width: 100%;
+  /* background-color: lightcoral; */
+}
+
+.Mpopular {
+  margin: 100px 0;
+}
+
+#uniTitle0 {
+  background: linear-gradient(270deg, #9951ff, #f65d76, #2c4fbb);
+  background-size: 400% 400%;
+  border-radius: 7px;
+  -webkit-animation: AnimationName 24s ease infinite;
+  -moz-animation: AnimationName 24s ease infinite;
+  animation: mListName 24s ease infinite;
+  height: 283px;
+  border-radius: 172px;
+}
+
+#uniTitle {
+  margin-bottom: 50px;
+  text-align: center;
+  background-color: white;
+  width: 386px;
+  padding: 10px 0 10px 10px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  height: 60px;
+  margin-top: 24px;
+}
+
+#uniCard {
+  background: none;
+  top: -182px;
+}
+
+#card-body1 {
+  background: #601dc4;
+  border-radius: 20px;
+  color: white;
+  border: 2px solid #9432b4;
+}
+
+.mCategory {
+  margin: auto;
+  padding: 8px 10px;
+  width: 190px;
+  text-align: center;
+  margin-bottom: 29px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: white;
+}
+
+#itUniImg {
+  width: 240px;
+  border: 2px solid #9432b4;
+}
+
+.uniStudentCnt {
+  color: #d0d0d0;
+}
+
+.lecCount {
+  text-align: center;
+  display: block;
+  position: absolute;
+  padding: 10px 20px;
+  background-color: antiquewhite;
+  border-radius: 3px;
+  top: 230px;
+  left: 150px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1.1em;
+}
+
+#mItBestName {
+  margin-left: 20px;
+  letter-spacing: 1px;
+}
+
+#mItRate {}
+
+#totalStudentCount {
+  display: inline-block;
+  margin-left: 10px;
+}

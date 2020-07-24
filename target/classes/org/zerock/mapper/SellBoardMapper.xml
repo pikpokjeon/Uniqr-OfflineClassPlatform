@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zerock.mapper.SellBoardMapper">
+
+<!-- 메인 홈 로딩  -->
+<select id="getlist" resultType="org.zerock.domain.SellboardVO">
+<![CDATA[
+select * from selboard WHERE rownum<7 ORDER BY sregdate ASC 
+]]>
+</select>
+
+<select id="topstream" resultType="org.zerock.domain.SellboardVO">
+	<![CDATA[
+	select * from selboard where rownum< 7 AND sstream IS NOT NULL ORDER BY sregdate ASC
+	]]>
+</select>
+
+<select id="topstream1" resultType="org.zerock.domain.SellboardVO">
+	<![CDATA[
+	select * from selboard where rownum< 7 AND rownum > 3 AND sstream IS NOT NULL ORDER BY sregdate ASC
+	]]>
+</select>
+
+
+
+<select id="topsell" resultType="org.zerock.domain.SellboardVO">
+	<![CDATA[
+	select * from selboard where  rownum < 7 ORDER BY  views ASC
+	]]>
+</select>
+
+
+
+
+<!-- 판매글 쓰기 -->
+<insert id="insert">
+	insert into SELBOARD (SNO,MID,SNAME,SCATEGORY,SREGDATE, SSTARTDATE,SENDDATE,SSCHEDULE,SCONTENT,SCOMMENT,STARGET,SCLAIM,SSTHUMB,SSIMAGE,SURL,SSTREAM,SMONEY,SMOC,SMOCIN)
+values (sno_sequence.nextval,#{mid}, #{sname},#{scategory},sysdate,#{sstartdate},#{senddate},#{sschedule},#{scontent},#{scomment},#{starget},#{sclaim},#{ssthumb},#{ssimage},#{surl},#{sstream},#{smoney},#{smoc},#{smocin})
+</insert>
+
+<!-- 판매글 링크 클릭시 -->
+<select id="read" resultType="org.zerock.domain.SellboardVO">
+	select * from selboard where sno=#{sno}
+</select>
+
+<!-- 판매글 삭제 -->
+<delete id="delete">
+	delete from SELBOARD,SELQNA,SELREVIEW,SQCOMMENT where sno=#{sno} 
+</delete>
+
+<!-- 판매글 수정 -->
+<update id="update">
+	update SELBOARD SNAME=#{sname},SCATEGORY=#{scategory},SSTARTDATE=#{sstartdate},SENDDATE=#{senddate},SSCHEDULE=#{sschedule} ,SCONTENT=#{scontent}, SCOMMENT=#{scomment},STARGET=#{starget},SCLAIM=#{sclaim},SSTHUMB=#{ssthumb},SSIMAGE=#{ssimage},SURL=#{surl},SSTREAM=#{sstream},SMONEY=#{smoney},SMOC=#{smoc},SMOCIN=#{smocin}
+	where sno=#{sno}
+</update>
+
+
+
+
+</mapper>

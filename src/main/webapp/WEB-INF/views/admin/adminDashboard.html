@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="ko">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인페이지</title>
+</head>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+    $(function () {
+                // 헤더넣기ffsdf
+                $("#header1").load("../../main/header1.html);
+                    // 검색부분
+                    $("#header2").load("/resources/main/header2.html");
+                    // 카테고리
+                    $("#header3").load("/resources/main/header3.html");
+
+                    // 컨텐트
+                    $("#MainBanner").load("/resources/main/MainBanner.html"); $("#MItemList").load(
+                        "/resources/main/MItemList.html"); $("#MItemList2").load("/resources/main/MItemList2.html");
+
+
+                    $("#footer").load("/resources/main/footer.html");
+                });
+</script>
+<!-- <link rel="stylesheet" type="text/css" href="/main/css/headerFooter.css"> -->
+<style>
+
+</style>
+
+<body>
+    <!-- 필수헤더 -->
+    <div id="header1"></div>
+    <!-- 검색헤더 -->
+    <div id="header2"></div>
+    <!-- 카테고리헤더 -->
+    <div id="header3"></div>
+
+    <!-- 메인배너 -->
+    <div id="MainBanner"></div>
+
+    <!-- 상품목록메인리스트 -->
+    <div id="MItemList"></div>
+    <!-- 인기상품외 하단배너 -->
+    <div id="MItemList2"></div>
+
+    <!-- 글로벌푸터 -->
+    <div id="footer"></div>
+
+
+
+
+
+</body>
+
+
+</html>
+</head>
+
+</html>
